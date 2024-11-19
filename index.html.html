@@ -147,6 +147,47 @@
             color: #ccc;
         }
 
+        .dj-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+        .dj-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+        .dj-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .dj-icon {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #e61e4e;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .dj-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #e61e4e;
+        }
+        .dj-feature-title {
+            color: #e61e4e;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        .dj-feature-description {
+            color: white;
+            line-height: 1.6;
+        }
         .services {
             padding: 80px 0;
             background-color: #000;
@@ -390,6 +431,83 @@
             </div>
         </div>
     </section>
+import { Music2, Users, Award } from 'lucide-react'
+
+export default function Component() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-3 text-center">
+        <div className="flex flex-col items-center space-y-4">
+          <div className="rounded-full border-2 border-[#e61e4e] p-4">
+            <Music2 className="h-8 w-8 text-[#e61e4e]" />
+          </div>
+          <h3 className="text-2xl font-bold text-[#e61e4e]">Versatilidade Musical</h3>
+          <p className="text-white">
+            Atua em eventos de diferentes tamanhos, com o mesmo entusiasmo e qualidade.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center space-y-4">
+          <div className="rounded-full border-2 border-[#e61e4e] p-4">
+            <Users className="h-8 w-8 text-[#e61e4e]" />
+          </div>
+          <h3 className="text-2xl font-bold text-[#e61e4e]">Adaptabilidade Total</h3>
+          <p className="text-white">
+            Capacidade de se adaptar ao perfil do público, garantindo animação em qualquer situação.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center space-y-4">
+          <div className="rounded-full border-2 border-[#e61e4e] p-4">
+            <Award className="h-8 w-8 text-[#e61e4e]" />
+          </div>
+          <h3 className="text-2xl font-bold text-[#e61e4e]">Excelência Garantida</h3>
+          <p className="text-white">
+            Profissionalismo e compromisso com a melhor experiência musical.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+<div class="dj-container">
+    <div class="dj-features">
+        <div class="dj-feature">
+            <div class="dj-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 18V5l12-2v13"></path>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+            </div>
+            <h3 class="dj-feature-title">Versatilidade Musical</h3>
+            <p class="dj-feature-description">Atua em eventos de diferentes tamanhos, com o mesmo entusiasmo e qualidade.</p>
+        </div>
+        <div class="dj-feature">
+            <div class="dj-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </div>
+            <h3 class="dj-feature-title">Adaptabilidade Total</h3>
+            <p class="dj-feature-description">Capacidade de se adaptar ao perfil do público, garantindo animação em qualquer situação.</p>
+        </div>
+        <div class="dj-feature">
+            <div class="dj-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+            </div>
+            <h3 class="dj-feature-title">Excelência Garantida</h3>
+            <p class="dj-feature-description">Profissionalismo e compromisso com a melhor experiência musical.</p>
+        </div>
+    </div>
+</div>
 
     <section class="gallery">
         <div class="container">
